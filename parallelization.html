@@ -1,17 +1,16 @@
-
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
     <title>Parallelization &#8212; Scorpio  documentation</title>
-    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="_static/alabaster.css" />
-    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
-    <script src="_static/jquery.js"></script>
-    <script src="_static/underscore.js"></script>
-    <script src="_static/doctools.js"></script>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="_static/alabaster.css?v=cb25574f" />
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js?v=b3ba4146"></script>
+    <script src="_static/doctools.js?v=888ff710"></script>
+    <script src="_static/sphinx_highlight.js?v=4825356b"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="prev" title="Code Structure" href="code_structure.html" />
@@ -31,19 +30,19 @@
 
           <div class="body" role="main">
             
-  <div class="section" id="parallelization">
-<span id="ch-parallelization"></span><h1>Parallelization<a class="headerlink" href="#parallelization" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="introduction">
-<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
+  <section id="parallelization">
+<span id="ch-parallelization"></span><h1>Parallelization<a class="headerlink" href="#parallelization" title="Permalink to this heading">¶</a></h1>
+<section id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this heading">¶</a></h2>
 <p>Scorpio uses Message Passing Interface (MPI) (<code class="docutils literal notranslate"><span class="pre">MPICH</span></code> library)</p>
-</div>
-<div class="section" id="questions">
-<h2>Questions<a class="headerlink" href="#questions" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="questions">
+<h2>Questions<a class="headerlink" href="#questions" title="Permalink to this heading">¶</a></h2>
 <p>oct-tree-block based mesh refinement.?
 Athena used a grid structure like Berger &amp; Colella (1989),?</p>
-</div>
-<div class="section" id="future-development">
-<h2>Future Development<a class="headerlink" href="#future-development" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="future-development">
+<h2>Future Development<a class="headerlink" href="#future-development" title="Permalink to this heading">¶</a></h2>
 <p>Plan to adopt the hybrid MPI + OpenMP approach. OpenMP parallelization is shared-memory parallelization used within a node while MPI distributed-memory parallelization used for messages exchange between nodes.</p>
 <p>From Athena++ wiki
 OpenMP parallelization is not very scalable in general. Generally speaking, we recommend to use flat-MPI or hybrid parallelization with a few (2-4) threads per physical core, except when you are using only one shared-memory node on which full OpenMP parallelization works fine. For CPUs with rich cores, such as Intel Xeon processors, flat-MPI parallelization often gives the best performance. Although modern CPUs support HyperThreading which allows you to launch more than one thread per core, usually you get no performance gain. On the other hand, for architectures with simpler cores but with fast hardware threads, including Intel Xeon Phi (Knights Landing; KNL) and IBM Blue Gene/Q (possibly newer POWER8/9 as well but we have not tested them), it is probably the best to launch a few threads per core (usually 4 for KNL and BG/Q) to keep the cores busy. Also, some modern processors such as AMD EPYC internally consist of multiple chiplets. In this case, you need to set assign threads and processes according to the internal structure in order to achieve the best performance. Because OpenMP threads can share some data, especially the MeshBlock tree, it saves some memory. When you are running extremely large parallel simulations, this will be helpful. In short, hybrid parallelization is recommended only when one or more of the following conditions are met:</p>
@@ -52,8 +51,8 @@ OpenMP parallelization is not very scalable in general. Generally speaking, we r
 You need to save memory foot print by sharing some resources.
 Your system vendor requires it.</p>
 </div></blockquote>
-</div>
-</div>
+</section>
+</section>
 
 
           </div>
@@ -99,7 +98,7 @@ Your system vendor requires it.</p>
     </form>
     </div>
 </div>
-<script>$('#searchbox').show(0);</script>
+<script>document.getElementById('searchbox').style.display = "block"</script>
 
 
 
@@ -116,7 +115,7 @@ Your system vendor requires it.</p>
       &copy;2022, SFG.
       
       |
-      Powered by <a href="http://sphinx-doc.org/">Sphinx 4.5.0</a>
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 7.1.2</a>
       &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
       
       |
