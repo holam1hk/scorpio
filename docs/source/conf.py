@@ -31,9 +31,10 @@ extensions = ['sphinx.ext.autodoc',
               'sphinx.ext.mathjax',
               'sphinx.ext.ifconfig',
               'sphinx.ext.viewcode',
-              'sphinx.ext.autosummary'
+              'sphinx.ext.autosummary',
+              'sphinx_rtd_theme'
               ]
-#              'sphinx_rtd_theme'
+#              
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
 
