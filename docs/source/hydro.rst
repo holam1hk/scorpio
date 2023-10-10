@@ -10,10 +10,6 @@ Introduction
 Governing equations and corresponding variables used in the code are presented here.
 
 -------------------------
-	
-.. note::
-
--  Under Development 
    
 Conservation Forms 
 ==================
