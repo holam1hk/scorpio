@@ -1,2 +1,2 @@
 furo==2021.11.16
-pip3 install sphinx_rtd_theme
+/usr/local/bin/python -m pip install --upgrade pip
