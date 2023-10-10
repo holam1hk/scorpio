@@ -49,7 +49,7 @@ numfig = True
 # a list of builtin themes.
 #
 #html_theme = 'alabaster'
-html_theme = 'sphinx-rtd-theme'
+#html_theme = 'sphinx-rtd-theme'
 
 #html_sidebars = {
 #   '**': ['globaltoc.html', 'sourcelink.html', 'searchbox.html'],
