@@ -81,15 +81,20 @@
 <span id="ch-turbulence"></span><h1>Turbulence Driving<a class="headerlink" href="#turbulence-driving" title="Permalink to this headline"></a></h1>
 <div class="section" id="introduction">
 <h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline"></a></h2>
-<p><code class="docutils literal notranslate"><span class="pre">calcDT.f90</span></code>
-<code class="docutils literal notranslate"><span class="pre">DTPlan.f90</span></code></p>
-<p>Lester’s paper? James Stone 2008?</p>
+<p><code class="docutils literal notranslate"><span class="pre">DTPlan.f90</span></code>
+<code class="docutils literal notranslate"><span class="pre">calcDT.f90</span></code></p>
 <p>dt_turb</p>
 <blockquote>
 <div><p>call g1%calcDrivingTurbulence_MD(g1%q) –drive turb
 DT_mode=0 called once.
 DT_mode=1 periodic driving</p>
 </div></blockquote>
+<p><code class="docutils literal notranslate"><span class="pre">driving_spectrum_3D</span></code> includes</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>driving_spectrum_3D = (km**6) * exp(-8.0 * km / drivingWN) !! power spectrum P(k)=E(k)/k^2
+driving_spectrum_3D = km ** (-2.0-2.0) ! burgers spectrum P = k^-2 / k^2
+driving_spectrum_3D = km ** (-5.0/3.0-2.0) ! Kolmogorov spectrum P = k^(-5/3) / k^2
+</pre></div>
+</div>
 </div>
 </div>
 
