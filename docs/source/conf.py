@@ -31,7 +31,8 @@ extensions = ['sphinx.ext.autodoc',
               'sphinx.ext.mathjax',
               'sphinx.ext.ifconfig',
               'sphinx.ext.viewcode',
-              'sphinx.ext.autosummary'
+              'sphinx.ext.autosummary',
+              'sphinx_rtd_theme',
               ]
 #              
 # Add any paths that contain templates here, relative to this directory.
@@ -48,8 +49,8 @@ numfig = True
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
 #
-html_theme = 'alabaster'
-#html_theme = 'sphinx_rtd_theme'
+#html_theme = 'alabaster'
+html_theme = 'sphinx_rtd_theme'
 
 #html_sidebars = {
 #   '**': ['globaltoc.html', 'sourcelink.html', 'searchbox.html'],
