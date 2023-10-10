@@ -1,2 +1,1 @@
-furo==2021.11.16
-/usr/local/bin/python -m pip install --upgrade pip
+furo==2022.09.15
