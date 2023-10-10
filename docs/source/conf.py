@@ -31,8 +31,7 @@ extensions = ['sphinx.ext.autodoc',
               'sphinx.ext.mathjax',
               'sphinx.ext.ifconfig',
               'sphinx.ext.viewcode',
-              'sphinx.ext.autosummary',
-              'sphinx-rtd-theme'
+              'sphinx.ext.autosummary'
               ]
 #              
 # Add any paths that contain templates here, relative to this directory.
@@ -50,7 +49,7 @@ numfig = True
 # a list of builtin themes.
 #
 #html_theme = 'alabaster'
-#html_theme = 'sphinx_rtd_theme'
+html_theme = 'sphinx-rtd-theme'
 
 #html_sidebars = {
 #   '**': ['globaltoc.html', 'sourcelink.html', 'searchbox.html'],
