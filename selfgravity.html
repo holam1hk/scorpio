@@ -1,0 +1,129 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Self-gravity &#8212; Scorpio  documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/alabaster.css" />
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Time Integration" href="time_integration.html" />
+    <link rel="prev" title="Turbulence Driving" href="turbulence.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="self-gravity">
+<span id="ch-selfgravity"></span><h1>Self-gravity<a class="headerlink" href="#self-gravity" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
+<p>evolveGridRK2()
+Call calcSelfgravity after riemann</p>
+<p>subroutine calcSelfgravity in gridModule
+call calcSG3D/calcSG3Dperiodic</p>
+<p><code class="docutils literal notranslate"><span class="pre">calcSG.f90</span></code>
+<code class="docutils literal notranslate"><span class="pre">sgPlan.f90</span></code>
+The gravitational potential <span class="math notranslate nohighlight">\(\Phi\)</span> is defined by the Poisson equation:</p>
+<p>DCMPLX(X [,Y]) returns a double complex number where X is converted to the real component. If Y is present it is converted to the imaginary component. If Y is not present then the imaginary component is set to 0.0. If X is complex then Y must not be present.</p>
+<p>The Kernel-based method37-39 is adopted to solve the Poisson equation
+37. Yen, Chien-Chang, et al. “Self-gravitational force calculation of infinitesimally thin gaseous disks.” Journal of Computational Physics 231.24 (2012): 8246-8261.
+38. Wang, Hsiang-Hsu, Ronald E. Taam, and David CC Yen. “Self-Gravitational Force Calculation of Infinitesimally Thin Gaseous Disks on Nested Grids.” The Astrophysical Journal Supplement Series 224.2 (2016): 16.
+39. Wang, Hsiang-Hsu, et al. “Self-gravitational Force Calculation of High-order Accuracy for Infinitesimally Thin Gaseous Disks.” The Astrophysical Journal Supplement Series 242.2 (2019): 17.</p>
+</div>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">Scorpio</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="hydro.html">Hydrodynamics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="turbulence.html">Turbulence Driving</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Self-gravity</a></li>
+<li class="toctree-l1"><a class="reference internal" href="time_integration.html">Time Integration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="code_structure.html">Code Structure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="parallelization.html">Parallelization</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="turbulence.html" title="previous chapter">Turbulence Driving</a></li>
+      <li>Next: <a href="time_integration.html" title="next chapter">Time Integration</a></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2022, SFG.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 4.5.0</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="_sources/selfgravity.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>
