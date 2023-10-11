@@ -75,7 +75,7 @@ Hydrodynamics Data Structures
    +-----------------------+-----------------------+-----------+-------------------------------+
    | ``pc``                | :math:`pc`            | 3.086e18  | cm                            |
    +-----------------------+-----------------------+-----------+-------------------------------+
-   | ``Msun``              | :math:`M_sun`         | 1.9e33    | g                             |
+   | ``Msun``              | :math:`M_{sun}`       | 1.9e33    | g                             |
    +-----------------------+-----------------------+-----------+-------------------------------+
    |                       |                       |           |                               |
    +-----------------------+-----------------------+-----------+-------------------------------+
@@ -94,7 +94,9 @@ Hydrodynamics Data Structures
    +-----------------------+------------------------------+-----------+-------------------------------+
    | ``tff``               | sqrt(3*pi/(32*GravConst*rho))|           | free-fall time                |
    +-----------------------+------------------------------+-----------+-------------------------------+
-   | ``B``                 | Bphy/sqrt(4pi)               |           |                               |
+   | ``B``                 | :math:`B_{phy}/\sqrt{4\pi}'  |           |                               |
+   +-----------------------+------------------------------+-----------+-------------------------------+
+   | ``B_{phy}``           | 8.0405e-7 [G,sqrt(g/cm)/s]   |           | 1.0 [sqrt(Msun)*km/(s*pc^1.5)]|
    +-----------------------+------------------------------+-----------+-------------------------------+
 
 .. _table:variables:
@@ -284,13 +286,8 @@ The corresponding volume density rho=68.4765 [Msun/pc^3]
 Jeans length: Jlen = 0.5654 [pc]
 Jeans mass: Jmass = 51.8439 [Msun]
 critical mass-to-flux ratio: M/(\Phi_B)=sqrt(5/2)/(3*pi*sqrt(GravConst))=2.5581
-[Bphy] = 1.0 [sqrt(Msun)*km/(s*pc^1.5)] = 8.0405e-7 [G,sqrt(g/cm)/s]
-Bcrit,phy=Jmass/(2.5581*pi*Jlen^2)=20.1799 [Bphy]= 16.22 uG
-Bcode=Bphy/sqrt(4*pi)
 The factor sqrt(4*pi) is absorbed in the definition of Bcode
-Bcrit,code=20.1799/sqrt(4*pi)=5.6926 [code unit]   
-sound speed of neutrals: 0.344 km/s
-sound speed of ions: 0.096 km/s  
+
    
 Within the routines that implement the hydrodynamics, there are
 several main data structures that hold the state.
