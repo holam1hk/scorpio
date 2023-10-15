@@ -179,6 +179,8 @@ call g1%writeGrid()  !! calling output3d in ``inout.f90``
 call g1%evolveGridRK2() !! calling rk2_3D.f03
     Initial
     Boundary
+
+    isRestart=0 !!!Default unless setRestart is called
 </pre></div>
 </div>
 <p>End
