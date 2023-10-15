@@ -117,6 +117,8 @@ Stardard case setting ``testSuiteMPI.f90``::
     call g1%evolveGridRK2() !! calling rk2_3D.f03
 	Initial
 	Boundary
+
+	isRestart=0 !!!Default unless setRestart is called
 	
 End	
 ``setCoordinates.f90`` includes ::
