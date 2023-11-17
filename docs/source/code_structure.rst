@@ -118,6 +118,7 @@ Stardard case setting ``testSuiteMPI.f90``::
 	Initial
 	Boundary
 
+    call g1%enableDrivingTurbulence(DT_mode=1) !!! initialize fftw mpi
 	isRestart=0 !!!Default unless setRestart is called
 	
 End	
