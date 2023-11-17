@@ -180,6 +180,7 @@ call g1%evolveGridRK2() !! calling rk2_3D.f03
     Initial
     Boundary
 
+call g1%enableDrivingTurbulence(DT_mode=1) !!! initialize fftw mpi
     isRestart=0 !!!Default unless setRestart is called
 </pre></div>
 </div>
