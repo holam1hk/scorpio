@@ -51,6 +51,12 @@ End
     qr(nvar) !!right interface state
 
     Then calculate flux
+    calling fluxSolver 
+    which is subroutine fluxHLLDAdiMHD1D(ql,qr,slopeL,slopeR,gam,flux,nvar)
+
+    UL=ql+0.5d0*slopeL   !!reconstructed left state
+    UR=qr-0.5d0*slopeR   !!reconstructed right state
+
 End
 
 The TR-BDF2 (trapezoidal rule and backward-difference formula of order two) scheme36 is employed to overcome the numerical stiffness of the ion-neutral collision 
