@@ -45,9 +45,12 @@ End
    case (5)
      fluxPtr=>fluxHLLDAdiMHD1D
 
+    Primitive variables like pressure, instead of energy, is used to compute the slope 
     SL(i,j,k,nvar)=slope(rhoL,rhoM,rhoR) !! slope
     ql(nvar) !!left interface state
-    qr(nvar) !!left interface state
+    qr(nvar) !!right interface state
+
+    Then calculate flux
 End
 
 The TR-BDF2 (trapezoidal rule and backward-difference formula of order two) scheme36 is employed to overcome the numerical stiffness of the ion-neutral collision 
