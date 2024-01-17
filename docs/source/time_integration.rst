@@ -8,7 +8,7 @@ Time Integration
 
 Introduction
 ============
-``gridModule.f90`` calling:    
+``gridModule.f90`` calling ::   
     subroutine evolveGridRK2(this)
     subroutine evolveGridRK2sg(this)
     call rk2_1D(this,this%q,this%q1,this%q2)  from rk2.f03
