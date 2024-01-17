@@ -18,6 +18,35 @@ Introduction
 
 End
 
+``rk2.f03`` calling ::  
+
+   call rieSolver(this,q,q,q1,dd=1)
+   call rieSolver(this,q,q1,q1,dd=2)
+   call rieSolver(this,q,q1,q1,dd=3)
+   rieSolver is a pointer calling subroutine riemannSolver3D(this,q,q1,q2,dd) defined in ``riemannSolverModule.f03``
+   then reference to solverAdiMHD3D e.g. rieSolver=>solverAdiMHD3D
+
+End
+
+``subroutine solverAdiMHD3D(this,q,q1,q2,dd)`` ::
+ 
+    procedure(limiter),pointer::slope=>null()    !! in ``riemannSolverModule.f03``
+       case(0)
+     slope=>zslop
+   case(1)
+     slope=>vslop
+   case(2)
+     slope=>fslop
+   case(3)
+     slope=>minmod
+    procedure(fluxSolver),pointer::fluxPtr=>null()   !! in ``riemannSolverModule.f03``
+       case (4)
+     fluxPtr=>fluxHLLAdiMHD1D
+   case (5)
+     fluxPtr=>fluxHLLDAdiMHD1D
+
+End
+
 The TR-BDF2 (trapezoidal rule and backward-difference formula of order two) scheme36 is employed to overcome the numerical stiffness of the ion-neutral collision 
 source term. The Kernel-based method37-39 is adopted to solve the Poisson equation. The above procedures are coupled into the second-order Runge-Kutta (RK2) 
 time-integration method40
