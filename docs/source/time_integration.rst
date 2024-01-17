@@ -30,8 +30,8 @@ End
 
 ``subroutine solverAdiMHD3D(this,q,q1,q2,dd)`` ::
      !!!!! dd=1 ==>x, dd=2 ==>y, dd=3 ==>z !!!!!
-    procedure(limiter),pointer::slope=>null()    !! in ``riemannSolverModule.f03``
-       case(0)
+   procedure(limiter),pointer::slope=>null()    !! in ``riemannSolverModule.f03``
+   case(0)
      slope=>zslop
    case(1)
      slope=>vslop
@@ -39,13 +39,15 @@ End
      slope=>fslop
    case(3)
      slope=>minmod
-    procedure(fluxSolver),pointer::fluxPtr=>null()   !! in ``riemannSolverModule.f03``
-       case (4)
+   procedure(fluxSolver),pointer::fluxPtr=>null()   !! in ``riemannSolverModule.f03``
+   case (4)
      fluxPtr=>fluxHLLAdiMHD1D
    case (5)
      fluxPtr=>fluxHLLDAdiMHD1D
 
     SL(i,j,k,nvar)=slope(rhoL,rhoM,rhoR) !! slope
+    ql(nvar) !!left interface state
+    qr(nvar) !!left interface state
 End
 
 The TR-BDF2 (trapezoidal rule and backward-difference formula of order two) scheme36 is employed to overcome the numerical stiffness of the ion-neutral collision 
