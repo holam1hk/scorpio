@@ -287,7 +287,7 @@ Jeans length: Jlen = 0.5654 [pc]
 Jeans mass: Jmass = 51.8439 [Msun]
 critical mass-to-flux ratio: M/(\Phi_B)=sqrt(5/2)/(3*pi*sqrt(GravConst))=2.5581
 The factor sqrt(4*pi) is absorbed in the definition of Bcode
-
+alpha_code = pc^2km/sM = 3.669e13 cgs
    
 Within the routines that implement the hydrodynamics, there are
 several main data structures that hold the state.
